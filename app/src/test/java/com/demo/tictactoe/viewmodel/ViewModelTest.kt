@@ -14,8 +14,8 @@ class ViewModelTest {
     private val playerOne = "Tejash"
     private val playerTwo = "Ajay"
     private val playerOneValue = Board.PLAYER_ONE_VALUE
-    private val row = 0
-    private val column = 0
+    private val ROW_INDEX = 0
+    private val COLUMN_INDEX = 0
 
     @Rule
     @JvmField
@@ -46,9 +46,9 @@ class ViewModelTest {
     fun `Given function should return expected result, when 0,0 column clicked in the game`(){
 
         viewModel.init(playerOne, playerTwo)
-        viewModel.onClickedCellAt(row,column)
+        viewModel.onClickedCellAt(ROW_INDEX,COLUMN_INDEX)
 
-        val actualResult =  viewModel.board.cells[row][column].player?.name
+        val actualResult =  viewModel.board.cells[ROW_INDEX][COLUMN_INDEX].player?.name
 
         Assert.assertEquals(playerOne, actualResult)
     }
@@ -65,9 +65,9 @@ class ViewModelTest {
     fun `Given function should return player one value, when 0,0 column clicked in the game`(){
 
         viewModel.init(playerOne, playerTwo)
-        viewModel.onClickedCellAt(row,column)
+        viewModel.onClickedCellAt(ROW_INDEX,COLUMN_INDEX)
 
-        val actualResult =  viewModel.cells[viewModel.stringFromNumbers(row, column)]
+        val actualResult =  viewModel.cells[viewModel.stringFromNumbers(ROW_INDEX, COLUMN_INDEX)]
 
         Assert.assertEquals(playerOneValue, actualResult)
     }
@@ -149,7 +149,7 @@ class ViewModelTest {
         val expectedResult = playerTwo
 
         viewModel.init(playerOne, playerTwo)
-        viewModel.onClickedCellAt(row,column)
+        viewModel.onClickedCellAt(ROW_INDEX,COLUMN_INDEX)
 
         val actualResult = viewModel.board.currentPlayer.name
 
@@ -161,8 +161,8 @@ class ViewModelTest {
         val expectedResult = 0
 
         viewModel.init(playerOne, playerTwo)
-        viewModel.onClickedCellAt(row,column)
-        viewModel.cells[viewModel.stringFromNumbers(row, column)]
+        viewModel.onClickedCellAt(ROW_INDEX,COLUMN_INDEX)
+        viewModel.cells[viewModel.stringFromNumbers(ROW_INDEX, COLUMN_INDEX)]
 
         viewModel.resetGame()
 
