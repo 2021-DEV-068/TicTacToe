@@ -4,28 +4,28 @@
     <item>
         <shape android:shape="rectangle">
             <padding android:bottom="2dp" />
-            <solid android:color="@color/purple_200" />
+            <solid android:color="@color/colorPrimaryDark" />
         </shape>
     </item>
 
     <item>
         <shape android:shape="rectangle">
             <padding android:top="2dp" />
-            <solid android:color="@color/purple_200" />
+            <solid android:color="@color/colorPrimaryDark" />
         </shape>
     </item>
 
     <item>
         <shape android:shape="rectangle">
             <padding android:left="2dp" />
-            <solid android:color="@color/colorAccent" />
+            <solid android:color="@color/colorPrimaryDark" />
         </shape>
     </item>
 
     <item>
         <shape android:shape="rectangle">
             <padding android:right="2dp" />
-            <solid android:color="@color/colorAccent" />
+            <solid android:color="@color/colorPrimaryDark" />
         </shape>
     </item>
 
